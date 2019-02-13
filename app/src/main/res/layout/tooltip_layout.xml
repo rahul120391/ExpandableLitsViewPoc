@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rlToolTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+    <LinearLayout
+            android:id="@+id/llAddContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_10dp"
+            android:gravity="center_vertical"
+    >
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_add"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Add Contacts"
+                  android:textColor="@color/endevaour"
+                  android:layout_marginStart="@dimen/dimen_10dp"
+        />
+    </LinearLayout>
+
+    <View
+            android:id="@+id/viewDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_below="@+id/llAddContacts"
+            android:layout_marginStart="-3dp"
+            android:layout_marginEnd="-3dp"
+            android:layout_alignEnd="@+id/llCalendar"
+            android:background="@color/gallery"></View>
+    <LinearLayout
+            android:id="@+id/llCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/viewDivider"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dimen_8dp"
+    >
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_calendar"
+        />
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Schedule Event"
+                  android:textColor="@color/endevaour"
+                  android:layout_marginStart="@dimen/dimen_10dp"
+        />
+    </LinearLayout>
+</RelativeLayout>

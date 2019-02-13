@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="gallery">#ebebeb</color>
+    <color name="endevaour">#00539e</color>
+    <color name="white">#fff</color>
+    <color name="fern">#6ac07a</color>
+    <color name="cardinal">#ca2339</color>
+    <color name="quill_gray">#dfe0de</color>
+    <color name="shuttle_gray">#60646a</color>
+    <color name="red">#FF3B00</color>
+    <color name="red_press">#990000</color>
+    <color name="tango">#f37720</color>
+    <color name="cerulen">#0080b6</color>
+    <color name="tool_tip_shadow">#FF9E9D9D</color>
+</resources>

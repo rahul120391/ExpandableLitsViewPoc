@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ExpandableListViewPOC</string>
+    <string name="companion_product_manage">Companion Product Management</string>
+    <string name="emp_name">Rahul</string>
+    <string name="position">Director Product Management</string>
+    <string name="location">Pune, Bldg3, Floor 3</string>
+</resources>
