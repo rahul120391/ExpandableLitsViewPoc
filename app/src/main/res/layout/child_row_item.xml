@@ -1,109 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.daimajia.swipe.SwipeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/slLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
 >
 
-    <FrameLayout
-            android:tag="Bottom1"
+    <android.support.v7.widget.CardView
             android:id="@+id/bottom_wrapper"
             android:layout_width="150dp"
-            android:orientation="vertical"
-            android:background="@color/white"
-            android:layout_height="match_parent">
-        <TextView
-                android:id="@+id/copy"
-                android:textColor="#fff"
-                android:text="Copy To\nAnother Group"
-                android:background="@drawable/swipe_left"
-                android:layout_marginEnd="@dimen/dimen_10dp"
-                android:gravity="center"
-                android:paddingTop="@dimen/dimen_30dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/dimen_8dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="@dimen/dimen_5dp"
+            android:elevation="@dimen/dimen_5dp"
+            app:cardUseCompatPadding="true"
+    >
+        <FrameLayout
+                android:tag="Bottom1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        <ImageView android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="@dimen/dimen_20dp"
-                   android:layout_marginBottom="@dimen/dimen_20dp"
-                   android:src="@drawable/ic_copy"
-                   android:layout_gravity="center_horizontal"
-        />
-    </FrameLayout>
-    <FrameLayout
-            android:tag="Bottom4"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_height="match_parent">
+            <TextView
+                    android:id="@+id/copy"
+                    android:textColor="#fff"
+                    android:text="Copy To\nAnother Group"
+                    android:background="@drawable/swipe_left"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dimen_30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/dimen_20dp"
+                       android:layout_marginBottom="@dimen/dimen_20dp"
+                       android:src="@drawable/ic_copy"
+                       android:layout_gravity="center_horizontal"
+            />
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
             android:id="@+id/bottom_wrapper_2"
             android:layout_width="100dp"
-            android:orientation="vertical"
-            android:layout_gravity="center_horizontal"
-            android:background="@color/white"
-            android:layout_height="match_parent">
-
-        <TextView
-                android:id="@+id/delete"
-                android:textColor="#fff"
-                android:text="Remove"
-                android:background="@drawable/swipe_right"
-                android:layout_marginStart="@dimen/dimen_10dp"
-                android:gravity="center"
-                android:paddingTop="@dimen/dimen_30dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/dimen_8dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="@dimen/dimen_5dp"
+            android:elevation="@dimen/dimen_5dp"
+            app:cardUseCompatPadding="true"
+    >
+        <FrameLayout
+                android:tag="Bottom4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        <ImageView android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="@dimen/dimen_20dp"
-                   android:layout_marginBottom="@dimen/dimen_20dp"
-                   android:src="@drawable/ic_remove"
-                   android:layout_marginStart="@dimen/dimen_5dp"
-                   android:layout_gravity="center_horizontal"
-        ></ImageView>
-    </FrameLayout>
-    <RelativeLayout
-            android:id="@+id/rlCard"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/delete"
+                    android:textColor="#fff"
+                    android:text="Remove"
+                    android:background="@drawable/swipe_right"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dimen_30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/dimen_20dp"
+                       android:layout_marginBottom="@dimen/dimen_20dp"
+                       android:src="@drawable/ic_remove"
+                       android:layout_gravity="center_horizontal"
+            ></ImageView>
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/cardview_bg"
+            app:cardCornerRadius="@dimen/dimen_8dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="@dimen/dimen_4dp"
+            android:elevation="@dimen/dimen_4dp"
+            app:cardUseCompatPadding="true"
     >
-
-        <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imgProfile"
-                android:layout_width="@dimen/dimen_48dp"
-                android:layout_height="@dimen/dimen_48dp"
-                android:layout_marginStart="@dimen/dimen_10dp"
-                android:src="@drawable/profile_icon"
-                android:padding="@dimen/dimen_10dp"
-        />
-        <LinearLayout
-                android:id="@+id/ll"
+        <RelativeLayout
+                android:id="@+id/rlCard"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_toEndOf="@+id/imgProfile"
-                android:padding="@dimen/dimen_10dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/cardview_bg"
         >
-            <android.support.v7.widget.AppCompatTextView
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="@dimen/dimen_48dp"
+                    android:layout_height="@dimen/dimen_48dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:src="@drawable/profile_icon"
+                    android:padding="@dimen/dimen_10dp"
+            />
+            <LinearLayout
+                    android:id="@+id/ll"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/shuttle_gray"
-                    android:text="@string/emp_name"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/dimen_18dp"
-            />
-            <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_5dp"
-                    android:text="@string/position"
-            />
-            <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/txtLocation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_5dp"
-                    android:text="@string/location"
-            />
-        </LinearLayout>
-    </RelativeLayout>
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@+id/imgProfile"
+                    android:padding="@dimen/dimen_10dp"
+            >
+                <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/shuttle_gray"
+                        android:text="@string/emp_name"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/dimen_18dp"
+                />
+                <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:text="@string/position"
+                />
+                <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:text="@string/location"
+                />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 </com.daimajia.swipe.SwipeLayout>

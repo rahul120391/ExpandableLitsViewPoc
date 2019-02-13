@@ -9,8 +9,10 @@ import android.view.ViewGroup
 import com.daimajia.swipe.SwipeLayout
 import kotlinx.android.synthetic.main.child_row_item.view.*
 
-class ChildAdapter : RecyclerView.Adapter<ChildAdapter.MyViewHolder>() {
+class ChildAdapter(recyclerViewPosition: RecyclerViewPosition) : RecyclerView.Adapter<ChildAdapter.MyViewHolder>() {
     private var context: Context? = null
+    private var recyclerViewPosition = recyclerViewPosition
+    private var swipePosition = -1
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): MyViewHolder {
         if (context == null) {
             context = parent.context
@@ -37,6 +39,33 @@ class ChildAdapter : RecyclerView.Adapter<ChildAdapter.MyViewHolder>() {
         viewHolder.rightLayout.setOnClickListener {
             viewHolder.slLayout.close()
         }
+        viewHolder.slLayout.tag = position
+        viewHolder.slLayout.addSwipeListener(object : SwipeLayout.SwipeListener {
+            override fun onOpen(layout: SwipeLayout?) {
+                val position = viewHolder.slLayout.tag as Int
+                if (swipePosition != -1 && swipePosition != position) {
+                    val holder = recyclerViewPosition.getView(position)
+                    holder?.itemView?.findViewById<SwipeLayout>(R.id.slLayout)?.close()
+                }
+                swipePosition = position
+
+            }
+
+            override fun onClose(layout: SwipeLayout?) {
+            }
+
+            override fun onUpdate(layout: SwipeLayout?, leftOffset: Int, topOffset: Int) {
+            }
+
+            override fun onStartOpen(layout: SwipeLayout?) {
+            }
+
+            override fun onStartClose(layout: SwipeLayout?) {
+            }
+
+            override fun onHandRelease(layout: SwipeLayout?, xvel: Float, yvel: Float) {
+            }
+        })
     }
 
     class MyViewHolder(val item: View) : RecyclerView.ViewHolder(item) {

@@ -14,7 +14,8 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import dev.jci.mwp.customviews.tooltip.ViewTooltip
 
-class ExpandableAdapter(val context: Context) : BaseExpandableListAdapter(), View.OnClickListener {
+class ExpandableAdapter(val context: Context) : BaseExpandableListAdapter(), View.OnClickListener,RecyclerViewPosition {
+
 
 
     private val context1 = context
@@ -28,6 +29,8 @@ class ExpandableAdapter(val context: Context) : BaseExpandableListAdapter(), Vie
     private var llAddContacts: LinearLayout? = null
 
     private var llScheduleEvent: LinearLayout? = null
+
+    private var rvView:RecyclerView?=null
 
     private var arrowImageArray = arrayListOf<Boolean>()
 
@@ -98,7 +101,7 @@ class ExpandableAdapter(val context: Context) : BaseExpandableListAdapter(), Vie
         if (view == null) {
             view = LayoutInflater.from(parent?.context).inflate(R.layout.child_layout, parent, false)
         }
-        val rvView = view?.findViewById<RecyclerView>(R.id.rvChild)
+        rvView = view?.findViewById<RecyclerView>(R.id.rvChild)
         if (rvView?.layoutManager == null) {
             val itemDecorator = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
             context?.let { context ->
@@ -107,8 +110,12 @@ class ExpandableAdapter(val context: Context) : BaseExpandableListAdapter(), Vie
             rvView?.layoutManager = LinearLayoutManager(context1)
             rvView?.addItemDecoration(itemDecorator)
         }
-        rvView?.adapter = ChildAdapter()
+        rvView?.adapter = ChildAdapter(this)
         return view
+    }
+
+    override fun getView(position:Int): RecyclerView.ViewHolder? {
+        return rvView?.findViewHolderForAdapterPosition(position)
     }
 
     override fun getChildId(groupPosition: Int, childPosition: Int): Long {
